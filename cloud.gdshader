@@ -1,9 +1,9 @@
 shader_type spatial;
 render_mode cull_back;
 
-// Nubes de voxeles: dithering ordenado (Bayer 4x4) con 75% de cobertura.
-// El 25% de pixeles descartados deja ver el cielo y simula volumen.
-const float COVERAGE = 0.75;
+// Nubes de voxeles: dithering ordenado (Bayer 4x4) con 30% de cobertura.
+// El 70% de pixeles descartados las deja muy transparentes y deja ver el cielo.
+const float COVERAGE = 0.3;
 
 void fragment() {
 	int px = int(FRAGCOORD.x) % 4;
